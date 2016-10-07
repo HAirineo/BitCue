@@ -109,4 +109,16 @@ public class Register extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Register.this,MainActivity.class );
+        startActivity(intent);
+        //this.finishAffinity();
+    }
+
+    @Override
+    protected  void onPause(){
+        super.onPause();
+        finish();
+    }
 }

@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     if (password.equals(storedPassword)) {
                         //Toast.makeText(MainActivity.this, "Logged in!", Toast.LENGTH_LONG).show();
                         Toast.makeText(MainActivity.this, loginDataBaseAdapter.getInfo(userName), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this,MainScreen.class );
+                        Intent intent = new Intent(MainActivity.this,Touch.class );
                         startActivity(intent);
 
                         //dialog.dismiss();
@@ -118,6 +118,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected  void onPause(){
+        super.onPause();
+        finish();
     }
 
 }
